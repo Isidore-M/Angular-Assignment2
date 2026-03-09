@@ -1,0 +1,98 @@
+  <div class="main">
+
+  <div class="menu">
+    <div class="logo">
+      <h5 class="logotext"> TaskTiko</h5>
+    <p>
+      Welcome to your Task manager
+    </p>
+  </div>
+    <div>
+   <button id="addtask-btn" class="btn btn-dark btn-sm rounded-pill px-4 py-2 my-btn"  (click)="openModal(addTaskModal)">
+    Add Task
+    </button>
+    </div>
+</div>
+<div id="container">
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Priority</th>
+      <th scope="col">Status</th>
+      <th scope="col">Due Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (task of Taks; track task; let i=$index) {
+    <tr>
+      <th scope="row">{{task.id |uppercase}}</th>
+      <td>{{task.name}}</td>
+      <td class="desc">{{task.description}}</td>
+      <!-- priority-->
+      @if(task.tag==='high'){
+        <td class="tags"><div class="pills-high"><p class="tags-high">High</p></div></td>
+      }
+       @else if(task.tag==='medium'){
+        <td class="tags"><div class="pills-medium"><p class="tags-medium">Medium</p></div></td>
+      }
+      @else(){
+        <td class="tags"><div class="pills-low"><p class="tags-low">Low</p></div></td>
+      }
+      <!-- completed or not-->
+       <!-- @if(task.iscompleted==true){
+        <td class="stat"> <a href="" (click)="togglestat(i)"> completed</a></td>
+      } @else {
+        <td class="stat"> <a href=""  (click)="togglestat(i)"> not completed</a></td>
+      } -->
+
+<label>
+  <input type="checkbox" [checked]="task.iscompleted" (change)="togglestat(i)">
+</label>
+
+{{task.iscompleted ? 'Completed' : 'Pending'}}
+      <td>{{task.deadline | date }}</td>
+
+    </tr>}
+  </tbody>
+</table>
+
+</div>
+</div>
+
+<!-- Add Task Modal -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<ng-template #addTaskModal let-modal>
+
+  <div class="modal-header">
+    <h5 class="modal-title">Add Task</h5>
+    <button class="btn-close" (click)="modal.dismiss()"></button>
+  </div>
+
+  <div class="modal-body">
+        <input type="text"  placeholder="enter ID "   class="form-control" #idinput>
+        <input type="text"  placeholder="enter Task Name"   class="form-control" #nameinput>
+        <input type="text"  placeholder="enter a short description "   class="form-control" #descriptioninput>
+        <input  type="date"  placeholder="enter the date "   class="form-control" #dateinput>
+  <select class="form-control" #priorityInput>
+    <option value="" style="color: rgb(186, 186, 186);">Choose Priority</option>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-secondary rounded-pill px-4 py-2 my-btn" (click)="modal.close()">Close</button>
+    <button class="btn btn-dark rounded-pill px-4 py-2 my-btn" (click)="addNewTask(idinput.value, nameinput.value, descriptioninput.value, dateinput.value,priorityInput.value); modal.close()">Add</button>
+  </div>
+
+</ng-template>
+

@@ -1,0 +1,165 @@
+#container{
+  width: 100%;
+  height: auto;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background: #ffffff;
+   border-radius: 1.5rem;
+   border: solid 0.5px #e0e0e0;
+}
+
+#addTask{
+
+  margin-left: 3rem;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.43);
+}
+.logo{
+
+  justify-content: left;
+  align-items: end;
+  text-align: left;
+}
+.logotext{
+  font-weight: 800;
+
+}
+
+p{
+  font-size: 0.7em;
+}
+
+
+.menu{
+ text-align: right;
+ padding-right: 1.5rem;
+ display: flex;
+ justify-content: space-between;
+ justify-items:center;
+ align-items: center;
+}
+
+th{
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #949494;
+}
+
+.desc{
+  width: 15rem;
+  word-wrap: break-word;
+  font-size: 0.7em;
+}
+.bulle{
+
+  width: 10px;
+  height: 3px;
+  background: #949494;
+  border-radius: 20%;
+}
+td{
+  font-size: 0.9rem;
+  color: #373737;
+}
+.p-tag{
+
+  width: 3rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+
+}
+
+.stat{
+  justify-items: center;
+  align-content: center;
+}
+
+.modal-backdrop + .modal-backdrop {
+  display: none;
+}
+
+.form-control{
+  margin: 1rem 0;
+}
+.modal-body{
+  padding: 0.7rem 2rem;
+}
+#addtask-btn{
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.176);
+  margin-left: 3rem;
+}
+.low{
+  background: #ffc04a;
+}
+#gray{
+  color: #ff2a2a;
+}
+.medium{
+  align-items: center;
+}
+.pills-medium{
+  background: #f4ca61;
+  width: 75%;
+  height: 10px;
+  display: inline-flex;
+   justify-content: center;
+  align-items: center;
+  border: 1px solid #cc9815;
+  border-radius: 1rem;
+  padding: 0.9rem;
+
+}
+
+.pills-low{
+  background: #7dd0b3;
+  width: 75%;
+  height: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #53aca7;
+  border-radius: 1rem;
+  padding: 0.9rem;
+
+}
+.pills-high{
+  background: #fc666e;
+  width: 75%;
+  height: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c33535;
+  border-radius: 1rem;
+  padding: 0.9rem;
+
+}
+.my-btn{
+  border: 2px solid rgba(238, 238, 238, 0.502);
+}
+.tags-high{
+  margin: 0 auto;
+  font-weight: 500;
+  color: #7b1414;
+  font-size: 0.8em;
+}
+.tags-medium{
+  margin: 0 auto;
+  font-weight: 500;
+  color: #a05c03;
+  font-size: 0.8em;
+}
+.tags-low{
+  margin: 0 auto;
+  font-weight: 500;
+  color: #0b5551;
+  font-size: 0.8em;
+}
+
+td.tags{
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+}
+
