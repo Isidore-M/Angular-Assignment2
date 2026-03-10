@@ -66,7 +66,8 @@ export class TaskService {
 
  addTask(val1:string, val2:string, val3:string,val4:string, val5?:string){
 const newVal= val5 as priority;
-  this.tasks.push({
+if(val1!=''|| val2!=''|| val3!=''){
+    this.tasks.push({
     id:val1,
     name:val2,
     description:val3,
@@ -74,7 +75,7 @@ const newVal= val5 as priority;
     tag:newVal,
     iscompleted:false
   })
-
+}
  }
 
  toggleStatus(i:number){

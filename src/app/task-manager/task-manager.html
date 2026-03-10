@@ -72,14 +72,16 @@
 
   <div class="modal-header">
     <h5 class="modal-title">Add Task</h5>
+
     <button class="btn-close" (click)="modal.dismiss()"></button>
   </div>
 
   <div class="modal-body">
-        <input type="text"  placeholder="enter ID "   class="form-control" #idinput>
-        <input type="text"  placeholder="enter Task Name"   class="form-control" #nameinput>
-        <input type="text"  placeholder="enter a short description "   class="form-control" #descriptioninput>
-        <input  type="date"  placeholder="enter the date "   class="form-control" #dateinput>
+    <p class="warning"> every field should be filled before cliking " add button"</p>
+        <input  required  type="text"  placeholder="enter ID "   class="form-control" #idinput>
+        <input  required type="text"  placeholder="enter Task Name"   class="form-control" #nameinput>
+        <input  required type="text"  placeholder="enter a short description "   class="form-control" #descriptioninput>
+        <input  required  type="date"  placeholder="enter the date "   class="form-control" #dateinput>
   <select class="form-control" #priorityInput>
     <option value="" style="color: rgb(186, 186, 186);">Choose Priority</option>
     <option value="low">Low</option>

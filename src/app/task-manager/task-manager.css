@@ -70,6 +70,9 @@ td{
   justify-items: center;
 
 }
+.warning{
+  color:#c33535 ;
+}
 
 .stat{
   justify-items: center;
